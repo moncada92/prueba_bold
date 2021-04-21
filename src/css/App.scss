@@ -1,0 +1,47 @@
+$blue:#111e6c;
+$red: #ef434e;
+$gray-dark: #323232;
+$gray-white: #b8b8b8; 
+$bg: #e5e7ef;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+body{
+  background: $bg;
+}
+.container{
+  max-width: 1300px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.row{
+  display: flex;
+  justify-content: space-around;
+}
+@mixin  gradient {
+  background: linear-gradient(to left, $red -20%, $blue 50%);
+}
+.section{
+  padding: 1rem
+}
+
+@import './menu';
+@import './totatVentas';
+@import './filters';
+@import './tableInfo';
+
+
+@media screen and(max-width: 1024px) {
+  .row{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+}
+

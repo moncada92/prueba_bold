@@ -1,0 +1,44 @@
+.TotalVentas{
+  border-radius: 0.8rem;
+  width: 100%;
+  max-width: 360px;
+  overflow: hidden;
+  background: white;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+
+  .totalVentas_head{
+    padding: 1rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: linear-gradient(to left, $red -40%, $blue 160%);
+
+    p{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    svg{
+      margin-left: 20px;
+      position: relative;
+      transform: translateY(3px);
+    }
+  }
+  .totalVentas_body{
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+  .precio{
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to left, $red -40%, $blue 160%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .fecha_pre{
+    color: $blue;
+    font-size: 0.9rem;
+  }
+}

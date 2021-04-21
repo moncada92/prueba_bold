@@ -1,0 +1,40 @@
+
+nav{
+  @include gradient;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  .nav_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu_content {
+    display: flex;
+
+    li{
+      margin: 0 10px;
+      
+      a{
+        color: white;
+
+        svg{
+          position: relative;
+          transform: translateY(3px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 600px) {
+  nav{
+    padding: 0;
+  }
+  .nav_row{
+    flex-direction: column;
+  }
+  .menu_content{
+    margin-top: 1rem;
+  }
+}

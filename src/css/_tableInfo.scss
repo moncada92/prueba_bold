@@ -1,0 +1,112 @@
+.container-table{
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  .table-info{
+    width: 100%;
+    border-radius: 1rem;
+    background: white;
+    overflow: hidden;
+  }
+  .table_title{
+    padding: 0.7rem 1rem;
+    @include gradient;
+    color: white;
+
+    h3{
+      font-weight: 500;
+    }
+  }
+  .table_head-row{
+    display: flex;
+    position: relative;
+    box-shadow: 0rem 0rem 0.3rem rgba($color: #000000, $alpha: 0.2);
+
+    div{
+      flex-grow: 1;
+      text-align: center;
+      padding: 1rem 0.5rem;
+      font-weight: 600;
+      width: 100%;
+    }
+  }
+  .table_body-row{
+    display: flex;
+
+    div{
+      flex-grow: 1;
+      text-align: center;
+      padding: 1rem 0.5rem;
+      width: 100%;
+      font-size: 0.9rem;
+      color: $gray-dark;
+      border-top: 1px solid $gray-white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &.success{
+        border-left: 3px solid $blue;
+      }
+      &.pending{
+        border-left: 3px solid $gray-white;
+      }
+      &.cobro{
+        color: $blue;
+        font-weight: 600;
+      }
+      span.monto{
+        color: $blue;
+        font-weight: 600;
+      }
+      span.text{
+        font-size: 0.7rem;
+      }
+      span.deduccion{
+        color: $red;
+      }
+      p.metodo_pago{
+        display: flex;
+      }
+      span.icon{
+        position: relative;
+        width: 30px;
+        margin-right: 5px;
+      }
+      span.icon::after, span.icon::before{
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: $red;
+        position: absolute;
+        border-radius: 100%;
+      }
+      span.icon::before{
+        left: 9px;
+        background: rgba(247, 179, 8, 0.8);
+        z-index: 2;
+      }
+      p svg{
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:600px) {
+  .container-table{
+
+    .table-info {
+      overflow-x: scroll;
+    }
+    .table_head{
+      width: 600px;
+    }
+  }
+  .container-table .table_body-row div span.icon::before{
+    left: 5px;
+  }
+}
