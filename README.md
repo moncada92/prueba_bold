@@ -10,7 +10,6 @@ Creación de un proyecto para visualizar ventas, con la funcionalidad de usar fi
 ## Iniciar proyecto
 
 ```nodejs
-  #Install dependencies (you must into folders API and frontend):
   npm run start
 ```
 
